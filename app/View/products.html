@@ -1,0 +1,93 @@
+
+  <!-- Main Content -->
+  <main class="content">
+    <div class="header-list-page">
+      <h1 class="title">{{route}}</h1>
+      <a href="http://localhost/desafio/?pagina=products&metodo=create" class="btn-action">Add new Product</a>
+    </div>
+    <table class="data-grid">
+      <tr class="data-row">
+        <th class="data-grid-th">
+            <span class="data-grid-cell-content">ID</span>
+        </th>
+        <th class="data-grid-th">
+          <span class="data-grid-cell-content">Categories</span>
+        </th>
+        <th class="data-grid-th">
+          <span class="data-grid-cell-content">Name</span>
+        </th>
+        <th class="data-grid-th">
+            <span class="data-grid-cell-content">SKU</span>
+        </th>
+        <th class="data-grid-th">
+            <span class="data-grid-cell-content">Price</span>
+        </th>
+        <th class="data-grid-th">
+            <span class="data-grid-cell-content">Quantity</span>
+        </th>
+        <th class="data-grid-th">
+          <span class="data-grid-cell-content">Image</span>
+        </th>
+        <th class="data-grid-th">
+            <span class="data-grid-cell-content">Actions</span>
+        </th>
+      </tr>
+
+      {% if products %}
+
+        {% for product in products %}
+          <tr class="data-row">
+            <td class="data-grid-td">
+              <span class="data-grid-cell-content">{{product.id}}</span>
+            </td>
+          
+            <td class="data-grid-td">
+              <span class="data-grid-cell-content">{{product.id_category}}</span>
+            </td>
+
+            <td class="data-grid-td">
+              <span class="data-grid-cell-content">{{product.name}}</span>
+            </td>
+
+            <td class="data-grid-td">
+              <span class="data-grid-cell-content">{{product.sku}}</span>
+            </td>
+
+            <td class="data-grid-td">
+              <span class="data-grid-cell-content">{{product.price}}</span>
+            </td>
+
+            <td class="data-grid-td">
+              <span class="data-grid-cell-content">{{product.quantity}}</span>
+            </td>
+
+            <td class="data-grid-td">
+              <span class="data-grid-cell-content">
+                <div class="product-image">
+                  <img src="assets/upload/{{product.image}}" layout="responsive" width="104" height="85" alt="{{product.image}}" />
+                </div>
+              </span>
+            </td>
+          
+            <td class="data-grid-td">
+              <div class="actions">
+                <div class="action edit"><a href="http://localhost/desafio/?pagina=products&metodo=edit&id={{product.id}}">Edit</a></div>
+                <div class="action delete"><a href="http://localhost/desafio/?pagina=products&metodo=delete&id={{product.id}}">Delete</a></div>
+              </div>
+            </td>
+          </tr>
+        {% endfor %}
+
+      {% else %}
+          
+        <tr class="data-row">
+          <td class="data-grid-td" colspan="7">
+            <span class="data-grid-cell-content">No data found.</span>
+          </td>
+        </tr>
+
+      {% endif %}
+
+    </table>
+  </main>
+  <!-- Main Content -->

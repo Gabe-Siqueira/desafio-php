@@ -1,0 +1,32 @@
+<!-- Main Content -->
+    <main class="content">
+        <div class="header-list-page">
+            <h1 class="title">{{route}}</h1>
+        </div>
+        <ul class="product-list">
+
+            {% if products %}
+
+                {% for product in products %}
+
+                    <li>
+                        <div class="product-image">
+                            <img src="assets/upload/{{product.image}}" layout="responsive" width="164" height="145" alt="{{product.image}}" />
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name"><span>{{product.name}}</span></div>
+                            <div class="product-price"><span>R$ {{product.price}}</span></div>
+                        </div>
+                    </li>
+
+                {% endfor %}
+
+            {% else %}
+                
+                <div lass="title">No data found.</div>
+
+            {% endif %}
+
+        </ul>
+    </main>
+<!-- Main Content -->

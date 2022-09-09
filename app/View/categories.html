@@ -1,0 +1,62 @@
+
+
+<!-- Main Content -->
+  <main class="content">
+    <div class="header-list-page">
+      <h1 class="title">{{route}}</h1>
+      <a href="http://localhost/desafio/?pagina=categories&metodo=create" class="btn-action">Add new Category</a>
+    </div>
+    <table class="data-grid">
+      <tr class="data-row">
+        <th class="data-grid-th">
+            <span class="data-grid-cell-content">ID</span>
+        </th>
+        <th class="data-grid-th">
+          <span class="data-grid-cell-content">Name</span>
+        </th>
+        <th class="data-grid-th">
+            <span class="data-grid-cell-content">Code</span>
+        </th>
+        <th class="data-grid-th">
+            <span class="data-grid-cell-content">Actions</span>
+        </th>
+      </tr>
+
+      {% if categories %}
+
+        {% for category in categories %}
+          <tr class="data-row">
+            <td class="data-grid-td">
+              <span class="data-grid-cell-content">{{category.id}}</span>
+            </td>
+          
+            <td class="data-grid-td">
+              <span class="data-grid-cell-content">{{category.name}}</span>
+            </td>
+
+            <td class="data-grid-td">
+              <span class="data-grid-cell-content">{{category.code}}</span>
+            </td>
+          
+            <td class="data-grid-td">
+              <div class="actions">
+                <div class="action edit"><a href="http://localhost/desafio/?pagina=categories&metodo=edit&id={{category.id}}">Edit</a></div>
+                <div class="action delete"><a href="http://localhost/desafio/?pagina=categories&metodo=delete&id={{category.id}}">Delete</a></div>
+              </div>
+            </td>
+          </tr>
+        {% endfor %}
+
+      {% else %}
+          
+        <tr class="data-row">
+          <td class="data-grid-td" colspan="4">
+            <span class="data-grid-cell-content">No data found.</span>
+          </td>
+        </tr>
+
+      {% endif %}
+
+    </table>
+  </main>
+<!-- Main Content -->

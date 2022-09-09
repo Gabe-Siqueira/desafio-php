@@ -1,0 +1,25 @@
+
+<!-- Main Content -->
+  <main class="content">
+    <h1 class="title new-item">{{route}} - ID: {{id}}</h1>
+    
+    <form method="post" action="?pagina=categories&metodo=update">
+      <div class="input-field">
+        <label for="name" class="label">Category Name</label>
+        <input type="text" id="name" name="name" class="input-text" value="{{name}}" required />        
+      </div>
+
+      <div class="input-field">
+        <label for="code" class="label">Category Code</label>
+        <input type="number" id="code" name="code" class="input-text" value="{{code}}" required />        
+      </div>
+
+      <input type="hidden" id="id" name="id" value="{{id}}">
+
+      <div class="actions-form">
+        <a href="http://localhost/desafio/?pagina=categories&metodo=index" class="action back">Back</a>
+        <input class="btn-submit btn-action"  type="submit" value="Save" />
+      </div>
+    </form>
+  </main>
+<!-- Main Content -->

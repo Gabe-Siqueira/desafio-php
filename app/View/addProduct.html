@@ -1,0 +1,65 @@
+
+<!-- Main Content -->
+  <main class="content">
+    <h1 class="title new-item">{{route}}</h1>
+
+    <form method="post" action="?pagina=products&metodo=store" enctype="multipart/form-data">
+
+      <div class="input-field">
+        <label for="name" class="label">Product Name</label>
+        <input type="text" id="name" name="name" class="input-text" required /> 
+      </div>
+
+      <div class="input-field">
+        <label for="sku" class="label">Product SKU</label>
+        <input type="number" id="sku" name="sku" class="input-text" required /> 
+      </div>
+      
+      <div class="input-field">
+        <label for="price" class="label">Price</label>
+        <input type="number" step="0.01" id="price" name="price" class="input-text" min="0" required /> 
+      </div>
+
+      <div class="input-field">
+        <label for="quantity" class="label">Quantity</label>
+        <input type="number" id="quantity" name="quantity" class="input-text" required /> 
+      </div>
+
+      <div class="input-field">
+        <label for="description" class="label">Description</label>
+        <textarea id="description" name="description" class="input-text" required></textarea>
+      </div>
+
+      <div class="input-field">
+        <label for="category" class="label">Categories</label>
+        <select id="category" name="category[]" class="input-text" multiple required>
+          {% if categories %}
+
+            {% for category in categories %}
+
+              <option value="{{category.id}}" >{{category.code}} - {{category.name}}</option>
+
+            {% endfor %}
+
+          {% else %}
+          
+            <option disabled="true" value="">No data found</option>
+
+          {% endif %}
+        </select>
+      </div>
+
+      <div class="input-field">
+        <label for="image" class="label">Image</label>
+        <input type="file" id="image" name="image" class="input-text" required /> 
+      </div>
+
+      <div class="actions-form">
+        <a href="http://localhost/desafio/?pagina=products&metodo=index" class="action back">Back</a>
+        <input class="btn-submit btn-action" type="submit" value="Save Product" />
+      </div>
+  
+    </form>
+
+  </main>
+<!-- Main Content -->

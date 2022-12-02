@@ -2,7 +2,7 @@
 
 ini_set('display_errors', 'On');
 
-$system_path = 'http://'.$_SERVER['HTTP_HOST'].'/desafio/';
+$system_path = 'http://'.$_SERVER['HTTP_HOST'].'/desafio-php/';
 
 $image_path = 'assets/upload/';
 

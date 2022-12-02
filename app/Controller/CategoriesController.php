@@ -46,10 +46,10 @@ class CategoriesController
             Category::store($_POST);
 
             echo '<script>alert("Category created successfully!");</script>';
-            echo '<script>location.href="http://localhost/desafio/?pagina=categories&metodo=index"</script>';
+            echo '<script>location.href="http://localhost/desafio-php/?pagina=categories&metodo=index"</script>';
         } catch(Exception $e) {
             echo '<script>alert("'.$e->getMessage().'");</script>';
-            echo '<script>location.href="http://localhost/desafio/?pagina=categories&metodo=index"</script>';
+            echo '<script>location.href="http://localhost/desafio-php/?pagina=categories&metodo=index"</script>';
         }
         
     }
@@ -82,10 +82,10 @@ class CategoriesController
             Category::update($_POST);
 
             echo '<script>alert("Category updated successfully!");</script>';
-            echo '<script>location.href="http://localhost/desafio/?pagina=categories&metodo=index"</script>';
+            echo '<script>location.href="http://localhost/desafio-php/?pagina=categories&metodo=index"</script>';
         } catch(Exception $e) {
             echo '<script>alert("'.$e->getMessage().'");</script>';
-            echo '<script>location.href="http://localhost/desafio/?pagina=categories&metodo=index"</script>';
+            echo '<script>location.href="http://localhost/desafio-php/?pagina=categories&metodo=index"</script>';
         }
         
     }
@@ -96,10 +96,10 @@ class CategoriesController
             Category::delete($dados);
 
             echo '<script>alert("Category deleted successfully!");</script>';
-            echo '<script>location.href="http://localhost/desafio/?pagina=categories&metodo=index"</script>';
+            echo '<script>location.href="http://localhost/desafio-php/?pagina=categories&metodo=index"</script>';
         } catch(Exception $e) {
             echo '<script>alert("'.$e->getMessage().'");</script>';
-            echo '<script>location.href="http://localhost/desafio/?pagina=categories&metodo=index"</script>';
+            echo '<script>location.href="http://localhost/desafio-php/?pagina=categories&metodo=index"</script>';
         }
         
     }

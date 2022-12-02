@@ -50,7 +50,7 @@ class ProductsController
             foreach ($_POST['category'] as $key => $value) {
                 if (empty($value)) {
                     echo '<script>alert("Field Categories invalid");</script>';
-                    echo '<script>location.href="http://localhost/desafio/?pagina=products&metodo=create"</script>';
+                    echo '<script>location.href="http://localhost/desafio-php/?pagina=products&metodo=create"</script>';
 
                     return false;
                 }
@@ -58,7 +58,7 @@ class ProductsController
 
             if (empty($_POST['name']) || empty($_POST['sku']) || empty($_POST['price']) || empty($_POST['quantity']) || empty($_POST['description'])) {
                 echo '<script>alert("Fill in all fields!");</script>';
-                echo '<script>location.href="http://localhost/desafio/?pagina=products&metodo=create"</script>';
+                echo '<script>location.href="http://localhost/desafio-php/?pagina=products&metodo=create"</script>';
 
 				return false;
 			}
@@ -90,10 +90,10 @@ class ProductsController
             Product::store($dados);
 
             echo '<script>alert("Product created successfully!");</script>';
-            echo '<script>location.href="http://localhost/desafio/?pagina=products&metodo=index"</script>';
+            echo '<script>location.href="http://localhost/desafio-php/?pagina=products&metodo=index"</script>';
         } catch(Exception $e) {
             echo '<script>alert("'.$e->getMessage().'");</script>';
-            echo '<script>location.href="http://localhost/desafio/?pagina=products&metodo=index"</script>';
+            echo '<script>location.href="http://localhost/desafio-php/?pagina=products&metodo=index"</script>';
         }
         
     }
@@ -172,10 +172,10 @@ class ProductsController
             Product::update($dados);
 
             echo '<script>alert("Product updated successfully!");</script>';
-            echo '<script>location.href="http://localhost/desafio/?pagina=products&metodo=index"</script>';
+            echo '<script>location.href="http://localhost/desafio-php/?pagina=products&metodo=index"</script>';
         } catch(Exception $e) {
             echo '<script>alert("'.$e->getMessage().'");</script>';
-            echo '<script>location.href="http://localhost/desafio/?pagina=products&metodo=index"</script>';
+            echo '<script>location.href="http://localhost/desafio-php/?pagina=products&metodo=index"</script>';
         }
         
     }
@@ -192,10 +192,10 @@ class ProductsController
             }
 
             echo '<script>alert("Product deleted successfully!");</script>';
-            echo '<script>location.href="http://localhost/desafio/?pagina=products&metodo=index"</script>';
+            echo '<script>location.href="http://localhost/desafio-php/?pagina=products&metodo=index"</script>';
         } catch(Exception $e) {
             echo '<script>alert("'.$e->getMessage().'");</script>';
-            echo '<script>location.href="http://localhost/desafio/?pagina=products&metodo=index"</script>';
+            echo '<script>location.href="http://localhost/desafio-php/?pagina=products&metodo=index"</script>';
         }
         
     }

@@ -13,10 +13,10 @@ Git Init repository
 ```bash
 
 # clone the repo
-$ git clone https://GabeSiqueira@bitbucket.org/gabesiqueira/desafio.git
+$ git clone https://github.com/Gabe-Siqueira/desafio-php.git
 
 # go into app's directory
-$ cd desafio
+$ cd desafio-php
 
 ```
 
@@ -29,12 +29,12 @@ $ composer install
 
 ```
 
-Open the browser and enter the path in the 'desafio' folder:
+Open the browser and enter the path in the 'desafio-php' folder:
 
 ```bash
 
 # browser
-$ http://localhost/desafio/
+$ http://localhost/desafio-php/
 
 ```
 
